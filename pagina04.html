@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áudio</title>
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        main{
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        main #titulo-audio{
+            padding-top: 15px;
+        }
+
+        main div{
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ÁUDIO</h1>
+        <p>Vamos aprender a colocar um áudio em seu site</p>
+    </header>
+    <nav>
+        <a href="index.html">Apresentação</a>
+        <a href="pagina01.html">Imagens</a>
+        <a href="pagina02.html">Emojis/Favicon/Listas</a>
+        <a href="pagina03.html">Iframe</a>
+        <a href="pagina05.html">Cores</a>
+        <a href="pagina06.html">Fontes</a>
+        <a href="pagina07.html">Id/Class</a>
+        <a href="pagina08.html">Pseudo-Classe/Elemento</a>
+        <a href="pagina09.html">Modelo de Caixas</a>
+        <a href="pagina10.html">Variáveis em CSS</a>
+        <a href="pagina11.html">Em Construção</a>
+    </nav>
+    <main>
+        <article>
+            <h1 id="titulo-audio">Áudio</h1>
+
+            <p>
+                Usando a tag <ins>&lt;audio&gt;</ins> podemos compartilhar um áudio em nosso site(o áudio tem que estar nos seus arquivos para isso). Dentro dessa tag podemos colocar qualquer tipo de arquivo de áudio desde que ele seja compatível com o navegador que o seu cliente irá usar. Dentro da tag &lt;audio&gt;, usamos a tag <ins>&lt;source&gt;</ins> para poder colocar os arquivos de áudio. Os tipos de arquivo de áudio são: <strong>audio/mpeg</strong>, <strong>audio/ogg</strong> e <strong>audio/aac</strong>.
+            </p>
+
+            <h2>Alguns atributos da tag &lt;audio&gt;</h2>
+
+            <h3>Metadata</h3>
+
+            <p>Esse atributo vai carregar apenas as informações sobre o arquivo(tamanho, tempo, informações de direitos, etc). Para colocar ele, escreva <strong>preload</strong> dentro da tag <ins>&lt;audio&gt;</ins>.</p>
+
+            <h3>None</h3>
+
+            <p>Não vai carregar absolutamente nada até que o usuário clique no botão play ou um script inicie a reprodução.</p>
+
+            <h3>Auto(padrão)</h3>
+
+            <p>Vai carregar o arquivo de áudio inteiro assim que a página for carregada, mesmo sem apertar o play.</p>
+
+            <h3>Controls</h3>
+
+            <p>Vai apresentar o player na tela, caso não colocado na tag &lt;audio&gt;, o controle não poderá ser usado.</p>
+
+            <h3>AutoPlay</h3>
+
+            <p>Vai iniciar a reprodução do áudio assim que a página for carregada.</p>
+
+            <h3>Loop</h3>
+
+            <p>
+                Vai fazer com que o áudio seja repetido eternamente. Você pode colocar mais de um tipo de arquivo para o mesmo áudio caso o seu favorito não funcione(coloque o arquivo que você prefere em cima de todos).
+            </p>
+
+            <h2>Exemplo</h2>
+
+            <div>
+                <audio preload="metadata" controls>
+                    <source src="midia/WhatsApp Audio 2023-08-10 at 19.55.46.mpeg" type="audio/mpeg">
+                </audio>
+            </div>
+
+        </article>
+    </main>  
+    <footer>
+        <p>Site criado por <strong>Matheus</strong> com o objetivo de treinar e ajudar ele mesmo ou alguém futuro</p>   
+    </footer>    
+</body>
+</html>

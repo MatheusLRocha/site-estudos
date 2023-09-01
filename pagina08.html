@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classe/elemento</title>
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        main{
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        main #titulo-pseudo{
+            padding-top: 15px;
+        }
+
+        main .links-exemplo{
+            color: #4662F5;
+            text-decoration: none;
+        }
+
+        main .links-exemplo:hover{
+            text-decoration: underline;
+        }
+
+        main .links-exemplo:visited{
+            color: #384FC2;
+        }
+
+        main .links-exemplo:active{
+            color: #91A2F7;
+        }
+
+        main #seta-link::before{
+            content: '>>';
+        }
+
+        main #seta-link::after{
+            content: '<<';
+        }
+
+        footer{
+            margin-top: 351px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PSEUDO-CLASSE/ELEMENTO</h1>
+        <p>Vamos ver como funcionam os pseudo-classes e pseudo-elementos</p>
+    </header>
+    <nav>
+        <a href="index.html">Apresentação</a>
+        <a href="pagina01.html">Imagens</a>
+        <a href="pagina02.html">Emojis/Favicon/Listas</a>
+        <a href="pagina03.html">Iframe</a>
+        <a href="pagina04.html">Áudio</a>
+        <a href="pagina05.html">Cores</a>
+        <a href="pagina06.html">Fontes</a>
+        <a href="pagina07.html">Id/Class</a>
+        <a href="pagina09.html">Modelo de Caixas</a>
+        <a href="pagina10.html">Variáveis em CSS</a>
+        <a href="pagina11.html">Em Construção</a>
+    </nav>
+    <main>
+        <article>
+            <h1 id="titulo-pseudo">Pseudo-classes</h1>
+
+            <p>
+                Uma <strong>pseudo-classe CSS</strong> é uma palavra-chave adicionada às declarações de um seletor após <ins>um sinal de dois pontos</ins> e espeficam um estado especial de um elemento. Existem várias pseudo-classes para estilos. Alguns deles são: <strong>:hover</strong> <strong>:visited</strong> <strong>:active</strong> <strong>:checked</strong> <strong>:empty</strong> e <strong>:focus</strong>.
+            </p>
+
+            <h1>Pseudo-elementos</h1>
+
+            <p>
+                Um <strong>pseudo-elemento CSS</strong> é uma palavra-chave adicionada às declarações de um seletor após <ins>dois sinais de dois pontos</ins> e permitem que você formate um pedaço específico do elemento referenciado. Principais pseudo-elementos: <strong>::before</strong> <strong>::after</strong> <strong>::first-letter</strong> <strong>::first-line</strong>.
+            </p>
+
+            <h2>Exemplo</h2>
+
+            <p>Para aprender HTML e CSS3, acesse o <a href="https://gustavoguanabara.github.io" class="links-exemplo" target="_blank">GitHub do Guanabara</a></p>
+            
+            <p>Para acompanhar os cursos, acesse o <a href="https://www.youtube.com/@CursoemVideo/featured" class="links-exemplo" target="_blank" id="seta-link">Canal do CursoemVideo</a></p>
+
+            
+        </article>
+    </main>
+    <footer>
+        <p>Site criado por <strong>Matheus</strong> com o objetivo de treinar e ajudar ele mesmo ou alguém futuro</p>
+    </footer>       
+</body>
+</html>

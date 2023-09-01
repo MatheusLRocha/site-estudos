@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes</title>
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        main{
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        main #titulo-fontes{
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FONTES</h1>
+        <p>Vamos aprender e teoria das fontes e a prática em sites para um visual melhor</p>
+    </header>
+    <nav>
+        <a href="index.html">Apresentação</a>
+        <a href="pagina01.html">Imagens</a>
+        <a href="pagina02.html">Emojis/Favicon/Listas</a>
+        <a href="pagina03.html">Iframe</a>
+        <a href="pagina04.html">Áudio</a>
+        <a href="pagina05.html">Cores</a>
+        <a href="pagina07.html">Id/Class</a>
+        <a href="pagina08.html">Pseudo-Classe/Elemento</a>
+        <a href="pagina09.html">Modelo de Caixas</a>
+        <a href="pagina10.html">Variáveis em CSS</a>
+        <a href="pagina11.html">Em Construção</a>
+    </nav>
+    <main>
+        <article>
+            <h1 id="titulo-fontes">Fontes</h1>
+
+            <p>
+                As fontes são conjunto de glifos(escritas) que formam uma família tipográfica. Assim como as cores, as fontes podem transmitir emoções. Se juntarmos as emoções das cores com as das fontes obtemos um resultado mais forte.
+            </p>
+
+            <h2>Família Tipográfica</h2>
+
+            <p>
+                É o conjunto de glifos que possuem as mesmas características anatômicas, independente das suas variações.
+                Exemplo: A família tipográfica <strong>Open Sans</strong>.
+            </p>
+
+            <h2>Categoria de Fontes</h2>
+
+            <p>
+                Os tipos ou fontes tipográficas são classificados por suas categorias. Elas são baseadas principalmente na presença ou ausência da serifa. As demais categorias acabam derivando das duas principais (com ou sem serifa) ou não se encaixam nessas categorias e por isso geram novas categorias.
+            </p>
+
+            <h3>Fontes Serifadas</h3>
+
+            <p>
+                Esta é a categoria mais clássica de fontes. Tipicamente, os caracteres serifados sempre foram aplicados em grandes blocos de textos impressos em papel e se aproveitam de uma característica da nossa percepção: nós nunca lemos as palavras letra por letra, e sim por um conjunto. As serifas têm a capacidade de guiar nossos olhos graças aos pequenos prolongamentos que elas criam e fazem as letras "se juntarem" em palavras. Atualmente não usamos fontes serifadas para textos longos.
+            </p>
+
+            <h3>Fontes Não Serifadas</h3>
+
+            <p>
+                Mais conhecidas por seu nome em Francês sans-serif ("sem serifa"), são fontes que, como você já pode imaginar, não apresentam serifas. As primeiras fontes dessa categoria surgiram em 1816, mas foram consideradas avançadas demais para a época. Anos depois, ressurgiram em versão melhorada e vieram pra ficar, principalmente para a Web. Isso acontece porque elas são ótimas para a exibição em telas/monitores pois transmitem a sensação de limpeza, clareza e organização.
+            </p>
+
+            <h3>Fontes Monoespaçadas</h3>
+
+            <p>
+                Essa é uma das categorias de fontes que vieram derivadas das duas categorias que vimos anteriormente, por isso existem fontes monoespaçadas com e sem serifas. A principal diferença desse tipo de fonte é o espaço horizontal (largura) ocupado por cada letra. Na maioria das fontes, a letra <strong>i</strong> ocupa muito menos espaço lateral do que a letra <strong>M</strong>, não é? Não para as fontes monoespaçadas. Elas possuem a mesma largura para todas as letras. 
+            </p>
+
+            <p>
+                A principal vantagem no uso desse tipo de fonte é facilitar ao máximo a leitura das palavras, principalmente aquelas que requerem que você as reproduza. Usamos muito esse tipo de fonte para representar comandos de linguagens de programação de computadores, Por isso, nós também costumamos chamá-las de <strong>fonte de terminal</strong> ou <strong>fonte de console</strong>.
+            </p>
+
+            <h2>Fontes Script</h2>
+            
+            <p>
+                Também chamadas de fontes handwriting, são aquelas que tentam imitar a escrita humana. Seu uso deve ser bem controlado e jamais será aplicado a textos muito longos, pois causam cansaço visual e tornam-se difíceis de ler.
+            </p>
+
+            <h3>Fontes Display</h3>
+
+            <p>
+                Toda fonte que foge completamente das definições feitas pelas classificações acima são consideradas fontes display. São fontes com bastantes efeitos visuais, enfeitadas e até mesmo curiosas. Também são chamadas de fontes comemorativas e algumas delas sequer representam letras, podendo ser desenhos de animais, objetos, pessoas, personagens de quadrinhos, etc.
+            </p>
+
+            <h1>Aplicando Fontes em CSS</h1>
+
+            <p>
+                Para aplicar fontes em CSS, utilizamos a propriedade das CSS <strong>font-family</strong>. Quando indicamos mais de uma família, estamos indicando ao navegador que dê preferência para a primeira. Caso ela não seja encontrada, tente a próxima.
+            </p>
+
+            <h2>Tamanhos</h2>
+
+            <p>
+                Além da família podemos configurar o tamanho da fonte e estilos extras das fontes. Existem várias medidas para especificar tamanhos de fontes mas a recomendação da W3C para sites é usar as medidas "em" e "px". 1em = 16px.
+            </p>
+
+            <h2>Outros Estilos</h2>
+
+            <p>
+                Outras duas formatações muito usadas em CSS são as <strong>font-style</strong> para aplicar o <em>itálico</em> e <strong>font-weight</strong> para o <strong>negrito</strong> sem contudo existir o fator semântico.
+            </p>
+
+            <aside>
+                <h1>Shorthands</h1>
+                <p>
+                    As shorthands são atalhos para estilizar as formatações de fontes de um jeito mais fácil e simples. Sua propriedade é <strong>font</strong>. Ao invés de ter que usar várias linhas para poder alterar o estilo dos textos, podemos usar apenas uma: <ins>p{font:italic bold 1em Arial, Helvetica, sans-serif};</ins>. A ordem dos atributos de uma shorthand em CSS é importante. Sua ordem é: font-style => font-variant => font-weight => font-size/height => font-family.
+                </p>
+            </aside>
+
+            <h2>Alinhamentos</h2>
+
+            <p>
+                Existem quatro tipos de alinhamentos: <strong>text-align: left;</strong> <strong>text-align: right;</strong> <strong>text-align: center;</strong> <strong>text-align: justify;</strong> Também temos como criar espaços nos parágrafos usando a tag: <strong>text-indent: ;</strong>
+            </p>
+
+            <aside>
+                <p>
+                    <strong>[EXTRA]</strong> para colocar sombra em textos, você pode usar a propriedade <strong>text-shadow: 0px 0px 0px black;</strong>. Ela possui quatro valores: deslocamento horizontal, deslocamento vertical, blur e a cor dela.
+                </p>
+            </aside>
+        </article>
+    </main>
+    <footer>
+        <p>Site criado por <strong>Matheus</strong> com o objetivo de treinar e ajudar ele mesmo ou alguém futuro</p>
+    </footer>   
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis em CSS</title>
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        main{
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        main #titulo-variaveis{
+            padding-top: 15px;
+        }
+
+        main .shorthand{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VARIÁVEIS EM CSS</h1>
+
+        <p>
+            Vamos aprender a utilizar variáveis personalizadas com CSS
+        </p>
+    </header>
+    <nav>
+        <a href="index.html">Apresentação</a>
+        <a href="pagina01.html">Imagens</a>
+        <a href="pagina02.html">Emojis/Favicon/Listas</a>
+        <a href="pagina03.html">Iframe</a>
+        <a href="pagina04.html">Áudio</a>
+        <a href="pagina05.html">Cores</a>
+        <a href="pagina06.html">Fontes</a>
+        <a href="pagina07.html">Id/Class</a>
+        <a href="pagina08.html">Pseudo-classe/Elemento</a>
+        <a href="pagina09.html">Modelo de Caixas</a>
+        <a href="pagina11.html">Em Construção</a>
+    </nav>
+    <main>
+        <article>
+            <h1 id="titulo-variaveis">Variáveis em CSS</h1>
+
+            <p>
+                Utilizamos as varíaveis em CSS para cadastrar os esquemas de cores e fontes do nosso site e isso vai facilitar muito na hora de efetuar eventuais mudanças estéticas no nosso site.
+            </p>
+
+            <p>
+                Para criarmos variáveis para nossas configurações devemos definir uma área de definições dentro do seu estilo para uma <ins>pseudo-classe</ins> chamada <ins>:root</ins>, que definem as configurações para a raiz de uma árvore, que vai servir para o documento inteiro.
+            </p>
+
+            <h3>Exemplo</h3>
+
+            <p>
+                *:root{
+                    --cor1: #223075;
+                    --cor2: #91A2F7;
+                    --cor3: #4662F5;
+                    --cor4: #454D75;
+                    --cor5: #384FC2;
+                
+                    --fonte-padrao: Arial, Helvetica, sans-serif;
+                    --fonte-titulo-especial: 'Teko', sans-serif;
+                    --fonte-titulo: 'Bebas Neue', sans-serif; 
+                }*
+            </p>
+
+            <p>
+                A partir de agora, definir cores e fontes em nossos elementos HTML ficará extremamente mais fácil e personalizável, utilizando a função <ins>var()</ins>.
+            </p>
+
+            <p>
+                *body{
+                    font-family: var(--fonte-padrao);
+                    color: var(--cor2);
+                    background-color: var(--cor1);
+                }
+            </p>
+
+            <p>
+                <strong>[OBS]</strong> as variáveis personalizadas em CSS devem ter seus nomes iniciando dois traços obrigatoriamente.
+            </p>
+
+            <aside>
+                <h2>Seletor * em CSS</h2>
+
+                <p>
+                    Existe um seletor especial das CSS que é o asterisco(*), ele tem uma função muito especial, pois basicamente ele aplica uma configuração padrão para <strong>todos</strong> os elementos no código HTML ao qual o estilo está sendo aplicado.
+                </p>
+
+                <p>
+                    Esse seletor global também ajuda a eliminar eventuais margens que os navegadores(user agents) adicionam a alguns elementos.
+                </p>
+
+                <h2>Espaçamento entrelinhas em Textos</h2>
+
+                <p>
+                    Outra configuração muito importante que podemos fazer oara textos muito longos é o espaçamento entre as linhas do nosso texto. Usando a propriedade <ins>line-height</ins>, podemos dizer qual é o tamanho do espaço entre uma linha e a outra do texto.
+                </p>
+
+                <p><strong>[OBS]</strong> O valor padrão na maioria dos navegadores é algo próximo ao 1.2em.</p>
+
+                <h2>Sombras em Textos</h2>
+
+                <p>
+                    Assim como as caixas, também podemos aplicar sombras aos textos com uma propriedade específica: <ins>text-shadow</ins>. A propriedade text-shadow também tem os mesmos quatro parâmetros que os da <ins>box-shadow</ins>.
+                </p>
+
+                <h2>Personalizando as listas</h2>
+
+                <p>
+                    Vamos ver como personalizar mais as listas:
+                </p>
+
+                <p class="shorthand">
+                    <strong>ul</strong>{list-style-type: '\2714\0020'; columns: 2; list-style-position: inside;}
+                </p>
+
+                <p>
+                    A propriedade <ins>list-style-type:</ins> faz com que o marcador seja personalizado. O valor <ins>\2714</ins> corresponde ao símbolo <ins>&#x2714</ins>. O valor <ins>\0020</ins> corresponde a um espaço em branco(também pode ser \00A0).
+                </p>
+
+                <p>
+                    A segunda declaração vai organizar a lista em duas colunas. O total da lista vai ser dividido em duas colunas de partes iguais(ou quase).
+                </p>
+
+                <p>
+                    A última declaração vai fazer com que os marcadores sejam exibidos na parte interna da caixa que contém a lista(normalmente a caixa de uma lista não inclui os marcadores).
+                </p>
+
+                <h2>Vídeos mais flexíveis</h2>
+
+                <p>
+                    Quando incorporamos um vídeo do YouTube, isso é feito através de uma tag &lt;iframe&gt; que já vem com as configurações de um tamanho fixo e precisamos alterar isso para que nossa interface possa se tornar mais responsiva e adaptar o tamanho do vídeo dinamicamente, principalmente para  telas pequenas.
+                </p>
+
+                <p>
+                    Para isso, vamos colocar o &lt;iframe&gt; de incorporação dentro de uma  &lt;div&gt; para que o vídeo esteja limitado dentro de um contêiner. 
+                </p>
+
+                <p>
+                    Após colocar o vídeo dentro de uma div, vamos fazer configurações de estilo para os dois elementos:
+                </p>
+
+                <p>
+                    <ins><strong>div.video</strong>{position: relative; background-color: blue; height: 0px; margin-left: -20px; margin-right: -20px; margin-bottom: 15px; padding-bottom: 59%;}</ins>
+                </p>
+
+                <p>
+                    <ins><strong>div.video > p</strong>{position: absolute; top: 5%; left: 5%; width: 90%; height: 90%;}</ins>
+                </p>
+
+                <p>
+                    O que mais importa aqui é entender o funcionamento da propriedade <ins>position</ins>, que é a única que não vimos até aqui. O valor padrão para essa propriedade de posicionamento é <ins>static</ins>, que mantém a hierarquia conforme estabelecido no documento HTML.
+                </p>
+
+                <p>
+                    Na <strong>div</strong>, nós colocamos o valor como <ins>relative</ins> para que seja considerado o posicionamento atual do elemento de divisão e que ele se mantenha adaptável para o caso de alteração no tamanho do navegador.
+                </p>
+
+                <p>
+                    Já dentro do iframe, nós usamos o posicionamento <ins>absolute</ins> para que a div - que é o seu contêiner - torne-se o ponto de partida para o posicionamento do frame. A partir daí podemos utilizar propriedades para configurar o deslocamento à esquerda(left) e ao topo(top) e seu tamanho em largura(width) e altura(height), todos em porcentagem de tela.
+                </p>
+
+                <p><strong>[EXTRA]</strong> A tag <ins><strong>transition-duration: 1s;</strong></ins> faz com que quando você passe o mouse sobre algo, demore 1 segundo de transição.</p>
+            </aside>
+        </article>
+    </main>
+    <footer>
+        <p>Site criado por <strong>Matheus</strong> com o objetivo de treinar e ajudar ele mesmo ou alguém futuro</p>
+    </footer>   
+</body>
+</html>

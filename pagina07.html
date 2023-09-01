@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id/Class</title>
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        main{
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        main #titulo-seletores{
+            padding-top: 15px;
+        }
+
+        main #exemplo-titulo{
+            padding-top: 15px;
+            padding-bottom: 25px;
+        }
+
+        main #titulo-principal-exemplo{
+            background-image: linear-gradient(to right, #4662F5, transparent);
+            margin-bottom: 8px;
+        }
+
+        main .subtitulo-exemplo{
+            background-image: linear-gradient(to left, #223075, transparent);
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>ID/CLASS</h1>
+        <p>Vamos aprender como funciona as propriedades <strong>ID</strong> e <strong>CLASS</strong></p>
+    </header>
+    <nav>
+        <a href="index.html">Apresentação</a>
+        <a href="pagina01.html">Imagens</a>
+        <a href="pagina02.html">Emojis/Favicon/Listas</a>
+        <a href="pagina03.html">Iframe</a>
+        <a href="pagina04.html">Áudio</a>
+        <a href="pagina05.html">Cores</a>
+        <a href="pagina06.html">Fontes</a>
+        <a href="pagina08.html">Pseudo-Classe/Elemento</a>
+        <a href="pagina09.html">Modelo de Caixas</a>
+        <a href="pagina10.html">Variáveis em CSS</a>
+        <a href="pagina11.html">Em Construção</a>
+    </nav>
+    <main>
+        <article>
+            <h1 id="titulo-seletores">Seletores Personalizados</h1>
+
+            <p>Para começar a dar mais poder às <abbr title="Cascading Style Sheets"><strong>CSS</strong></abbr>, criando estilos personalizados, precisamos aprender a utilizar os seletores de <strong>id(#)</strong> e de <strong>class(.)</strong> de maneira eficiente. Ao criar nosso conteúdo em <abbr title="Hipertext Markup Language"><strong>HTML</strong></abbr>, podemos <ins>identificar um determinado elemento único</ins> com um <strong><ins>id</ins></strong>, ou <ins>agrupar elementos múltiplos que tenham características semelhantes</ins> com um <strong>class</strong></p>
+
+            <h2>Id</h2>
+
+            <p>
+                Os seletores de <strong>Id</strong> permitem que você personalize um único elemento HTML dentro da página atual, seu símbolo é uma hashtag(#) em CSS.
+            </p>
+
+            <h2>Class</h2>
+
+            <p>
+                Os seletores de <strong>class</strong> permitem que você personalize e agrupe vários elementos HTML com as mesmas características dentro da página atual, seu símbolo é um ponto(.) em CSS.
+            </p>
+
+            <h2 id="exemplo-titulo">Exemplo</h2>
+
+            <h1 id="titulo-principal-exemplo">Título Principal</h1>
+
+            <h2 class="subtitulo-exemplo">Aprenda HTML</h2>
+
+            <h3>Subtítulo</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis tenetur dicta voluptas minima laboriosam eaque perspiciatis placeat mollitia ipsum expedita, ipsam repellat ea quo deserunt facilis est excepturi nihil hic!</p>
+
+            <h2 class="subtitulo-exemplo">Aprenda HTMl</h2>
+
+            <h3>Subtítulo</h3>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nesciunt, voluptatum quam, et officia error alias consectetur a rerum in earum necessitatibus. Exercitationem ullam amet blanditiis fugiat fugit inventore temporibus.
+            </p>
+
+            <aside>
+                <p>
+                    <strong>[DICA]</strong> Não se pode ter dois elementos com um mesmo <strong>id</strong> em um mesmo documento HTML. Porém, podemos atribuir um mesmo <strong>class</strong> para vários elementos que possuam essa mesma característica
+                </p>
+            </aside>
+        </article>
+    </main>
+    <footer>
+        <p>Site criado por <strong>Matheus</strong> com o objetivo de treinar e ajudar ele mesmo ou alguém futuro</p>
+    </footer>   
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        main{
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        main #titulo-caixas{
+            padding-top: 15px;
+        }
+
+        main img{
+            display: block;
+            margin: auto;
+        }
+
+        main .texto-separador{
+            padding-top: 10px;
+        }
+
+        main .shorthand{
+            text-align: center;
+        }
+
+        main ul{
+            list-style-position: inside;
+            columns: 3;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MODELO DE CAIXAS</h1>
+
+        <p>vamos aprender como funcionam as caixas em um documento HTML</p>
+    </header>
+    <nav>
+        <a href="index.html">Apresentação</a>
+        <a href="pagina01.html">Imagens</a>
+        <a href="pagina02.html">Emojis/Favicon/Listas</a>
+        <a href="pagina03.html">Iframe</a>
+        <a href="pagina04.html">Áudio</a>
+        <a href="pagina05.html">Cores</a>
+        <a href="pagina06.html">Fontes</a>
+        <a href="pagina07.html">Id/Class</a>
+        <a href="pagina08.html">Pseudo-classe/Elemento</a>
+        <a href="pagina10.html">Variáveis em CSS</a>
+        <a href="pagina11.html">Em Construção</a>
+    </nav>
+    <main>
+        <article>
+            <h1 id="titulo-caixas">Modelo de Caixas</h1>
+
+            <p>Entender o modelo das caixas é um dos primeiros passos para construir interfaces web e começar a dar forma aos seus sites.</p>
+
+            <h2>O que é uma caixa?</h2>
+
+            <p>Baseado em um conceito chamado <ins>"box-model"</ins>, a grande maioria dos elementos HTML que temos no nosso site são como caixas. Elas são <ins>conteiners</ins> que armazenam conteúdos ou outras caixas.</p>
+
+            <h2>Anatomia de uma caixa</h2>
+
+            <picture>
+                <source media="(max-width: 500px)" srcset="Imagens/modelo-caixa-pq.png" type="image/png">
+                <img src="Imagens/modelo-caixa.png" alt="modelo de caixa">
+            </picture>
+
+            <p>
+                Primeiro temos o <strong>conteúdo</strong>(content), que é representado na imagem pela cor vermelha. Por padrão, toda caixa é composta apenas pelo conteúdo e não possui <ins>padding</ins>, <ins>border</ins>, nem <ins>outline</ins>(uma linha que vai ficar entre a margem pra dentro e a borda pra fora) e <ins>margin</ins>. Todo conteúdo possui uma <strong>largura</strong>(width) e uma <strong>altura</strong>(height) e a esse conjunto de propriedades, damos o nome de <strong>box-size</strong>(tamanho da caixa). O tamanho da caixa não inclui as medidas de padding, border, outline e margin.
+            </p>
+
+            <p>
+                Depois do conteúdo e seu tamanho, vamos focar na <strong>borda</strong> que fica em volta dele. Ela pode ter uma espessura, uma cor e um formato. Entre a borda e o conteúdo - da borda pra dentro - temos o <strong>preenchimento</strong>(padding) e da borda para fora temos a <strong>margem</strong>(margin). Entre a margem e a borda, podemos determinar o <strong>contorno</strong>(outline) que é muito pouco utilizado. Ele é um traçado visual que podemos criar fora da borda e o cálculo da sua espessura faz parte da margem estabelecida.
+            </p>
+
+            <aside>
+                <h2>Shorthands</h2>
+
+                <p>As configurações de borda e contorno também possuem <ins>shorthands</ins> para simplificar os seus códigos. A ordem para as duas configurações é sempre a mesma para as duas shorthands: largura(width), estilo(style) e cor(color).</p>
+
+                <p class="shorthand"><ins>border: 10px solid red;</ins></p>
+                <p class="shorthand"><ins>outline: 30px solid blue;</ins></p>
+            </aside>
+
+            <h2>Preenchimento e margem personalizada</h2>
+
+            <p>
+                Todo elemento de caixa possui quatro valores para padding e margin, sempre nessa ordem: <ins>superior(top)</ins>, <ins>direita(right)</ins>, <ins>inferior(bottom)</ins> e <ins>esqueda(left)</ins>. Quando colocamos um único valor de dimensão para o preenchimento ou margem, esse mesmo valor é aplicado a todas as direções, mas também podemos fazer códigos como:
+            </p>
+
+            <p class="shorthand">
+                <ins>padding: 10px, 15px 20px 25px;</ins>
+            </p>
+
+            <p class="shorthand">
+                <ins>margin: 0px 10px 20px 30px;</ins>
+            </p>
+
+            <p>
+                Também podemos indicar cada <ins>shorthand</ins> das propriedades usando apenas duas medidas. Só é permitido usar isso quando as medidas <strong>top</strong> e <strong>bottom</strong> forem iguais entre si e o mesmo também ocorrer entre as medidas <strong>right</strong> e <strong>left</strong>.
+            </p>
+
+            <h3>Margens automáticas</h3>
+
+            <p>
+                Para poder centralizar os blocos na tela do navegador, precisamos pedir ao computador que calcule as margens da esquerda e direita automaticamente. Para centralizar uma caixa use a seguinte declaração no seu seletor:
+            </p>
+
+            <p class="shorthand">
+                <ins>margin:auto;</ins>
+            </p>
+
+            <h2>Tipos de caixa</h2>
+
+            <p>
+                Dependendo do comportamento da caixa, podemos classificá-la em duas categorias:
+            </p>
+
+            <h3>Caixa do tipo Block-Level</h3>
+
+            <p>
+                Um elemento dito <strong>block-level</strong> sempre vai se iniciar em uma nova linha e vai ocupar a largura total do elemento onde ele está contido. Se não estiver contido em nenhuma outra caixa, ele vai ocupar 100% da largura do &lt;body&gt;.
+            </p>
+
+            <p>
+                O elemento block-level mais conhecido é o <ins>&lt;div&gt;</ins> e suas variações semânticas modernas da <strong>HTML5</strong>, como <ins>&lt;main&gt;</ins>, <ins>&lt;section&gt;</ins>, <ins>&lt;aside&gt;</ins>, etc.
+            </p>
+
+            <h3>Lista de alguns elementos block-level</h3>
+
+            <ul>
+                <li>&lt;address&gt;</li>
+                <li>&lt;div&gt;</li>
+                <li>&lt;footer&gt;</li>
+                <li>&lt;main&gt;</li>
+                <li>&lt;section&gt;</li>
+                <li>&lt;article&gt;</li>
+                <li>&lt;dl&gt;</li>
+                <li>&lt;form&gt;</li>
+                <li>&lt;nav&gt;</li>
+                <li>&lt;table&gt;</li>
+                <li>&lt;aside&gt;</li>
+                <li>&lt;dt&gt;</li>
+                <li>&lt;h1 - h6&gt;</li>
+                <li>&lt;nonscript&gt;</li>
+                <li>&lt;tfoot&gt;</li>
+                <li>&lt;blockquote&gt;</li>
+                <li>&lt;fieldset&gt;</li>
+                <li>&lt;header&gt;</li>
+                <li>&lt;ol&gt;</li>
+                <li>&lt;ul&gt;</li>
+                <li>&lt;canvas&gt;</li>
+                <li>&lt;figcaption&gt;</li>
+                <li>&lt;hr&gt;</li>
+                <li>&lt;p&gt;</li>
+                <li>&lt;video&gt;</li>
+                <li>&lt;dd&gt;</li>
+                <li>&lt;figure&gt;</li>
+                <li>&lt;li&gt;</li>
+                <li>&lt;pre&gt;</li>
+            </ul>
+
+            <h3 class="texto-separador">Caixa do tipo Inline-Level</h3>
+
+            <p>
+                Um elemento do tipo <strong>inline-level</strong> não vai começar em uma nova linha, e sim no ponto exato onde foram definidos e a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo.
+            </p>
+
+            <h3>Lista de alguns elementos inline-level</h3>
+
+            <ul>
+                <li>&lt;a&gt;</li>
+                <li>&lt;button&gt;</li>
+                <li>&lt;img&gt;</li>
+                <li>&lt;output&gt;</li>
+                <li>&lt;span&gt;</li>
+                <li>&lt;abbr&gt;</li>
+                <li>&lt;cite&gt;</li>
+                <li>&lt;input&gt;</li>
+                <li>&lt;q&gt;</li>
+                <li>&lt;strong&gt;</li>
+                <li>&lt;acronym&gt;</li>
+                <li>&lt;code&gt;</li>
+                <li>&lt;kbd&gt;</li>
+                <li>&lt;sump&gt;</li>
+                <li>&lt;sub&gt;</li>
+                <li>&lt;b&gt;</li>
+                <li>&lt;dfn&gt;</li>
+                <li>&lt;label&gt;</li>
+                <li>&lt;script&gt;</li>
+                <li>&lt;textarea&gt;</li>
+                <li>&lt;bdo&gt;</li>
+                <li>&lt;em&gt;</li>
+                <li>&lt;map&gt;</li>
+                <li>&lt;select&gt;</li>
+                <li>&lt;tt&gt;</li>
+                <li>&lt;br&gt;</li>
+                <li>&lt;i&gt;</li>
+                <li>&lt;object&gt;</li>
+                <li>&lt;small&gt;</li>
+                <li>&lt;var&gt;</li>
+            </ul>
+
+            <h2 class="texto-separador">Grouping Tags e Semantic Tags</h2>
+
+            <p>
+                A linguagem HTML padrão tinha apenas duas tags de agrupamento genérico: a &lt;div&gt; e a &lt;span&gt;. A diferença entre elas é que a div é do tipo <ins>block-level</ins> e a span é <ins>inline-level</ins>. Com o surgimento da HTML5, surgiram as tags semânticas de agrupamento. As duas tags genéricas(agora chamadas de não-semânticas) não deixaram de existir ou ficaram obsoletas, mas seu uso agora faz menos sentido, pois temos tags para dividir as partes do nosso documento HTML.
+            </p>
+
+            <h2>Principais agregadores semânticos da HTML5</h2>
+
+            <h3>Header</h3>
+
+            <p>
+                É o cabeçalho do site. Pode ser o cabeçalho principal de um site ou o cabeçalho dee uma seção ou artigo. Normalmente inclui títulos <ins>&lt;h1&gt; - &lt;h6&gt;</ins>, subtítulos e podem conter menus de navegação.
+            </p>
+
+            <h3>Nav</h3>
+
+            <p>
+                Define a área que possui os links de navegação pela estrutura de páginas que vão compor o website. Um &lt;nav&gt; pode estar dentro de um &lt;header&gt;.
+            </p>
+
+            <h3>Main</h3>
+
+            <p>
+                Usado para delimitar o conteúdo principal do nosso site. Normalmente concentra as seções, artigos e conteúdos periféricos.
+            </p>
+
+            <h3>Section</h3>
+
+            <p>
+                Cria seções para a página. Pode conter o conteúdo diretamento no seu corpo ou dividir os conteúdos em artigos com conteúdos específicos.
+            </p>
+
+            <h3>Article</h3>
+
+            <p>
+                Vai conter um conteúdo que pode ser lido de forma independente e dizem respeito a um mesmo assunto. Podemos usar um &lt;article&gt; para delimitar um blog ou fórum, uma notícia, etc.
+            </p>
+
+            <h3>Aside</h3>
+
+            <p>
+                Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção. Normalmente um conteúdo &lt;aside&gt; está posicionado ao lado de um determinado texto ou até mesmo no meio dele.
+            </p>
+
+            <h3>Footer</h3>
+
+            <p>
+                Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte diretamente do conteúdo nem é um conteúdo periférico, mas possui informações sobre autoria do conteúdo, links adicionais, mapa do site, documentos relacionados.
+            </p>
+
+            <h2>Sombras nas caixas</h2>
+
+            <p>
+                As sombras são muito úteis para dar volume, sensação de que as caixas estão ali realmente. Para criar uma sombra em uma caixa, você deve usar a declaração escpecial <ins><strong>box-shadow: *px *px *px black;</strong></ins>
+            </p>
+
+            
+            <h3>Quatro valores do box-shadow e suas ordens</h3>
+
+            <p>
+                <strong>Primeiro, deslocamento horizontal:</strong> quanto a sombra vai andar para a direita(valores negativos causam deslocamento para a direita).
+            </p>
+
+            <p>
+                <strong>Segundo, deslocamento vertical:</strong> quanto a sombra vai andar para baixo(valores negativos causam deslocamento para cima).
+            </p>
+
+            <p>
+                <strong>Terceiro, embaçamento(blur):</strong> quanto a sombra vai se espalhar pelo fundo.
+            </p>
+
+            <p>
+                <strong>Quarto, cor(color):</strong> cor da sombra, É possível usar transparência. 
+            </p>
+
+            <h2>Bordas decoradas</h2>
+
+            <p>
+                Podemos arredondar os vértices usando uma declaração simples usando a propriedade <ins><strong>border-radius</strong></ins>.
+            </p>
+
+            <p class="shorthand">
+                <ins>border-radius: 10px;</ins>
+            </p>
+
+            <p>
+                Podemos indicar na declaração acima quatros medidas diferentes, uma para cada vértice da caixa. Assim como fizemos com as margens, também é possível indicar apenas dois valores, o que vai agir em vértices intercaladas, partindo do canto superior esquerdo. 
+            </p>
+
+            <p class="shorthand">
+                <ins>border-radius: 10px 20px 30px 40px;</ins>
+            </p>
+
+            <p class="shorthand">
+                <ins>border-radius: 10px 30px;</ins>
+            </p>
+
+            <h2>Responsividade</h2>
+
+            <p>
+                Um site responsivo vai ser capaz de adaptar os tamanhos dos seus componentes para manter o site plenamente visível para qualquer tela.
+            </p>
+
+            <h3>Largura e altura adaptáveis</h3>
+
+            <p>
+                Para que nosso site se adapte mais facilmente ao tamanho da tela, uma das técnicas básicas que podem ser utilizadas é deixar algumas caixas estrategicamente um pouco mais flexíveis indicando valores mínimos(min-width/min-height) e máximos(max-width/max-height).
+            </p>
+
+            <p class="shorthand">
+                <ins>min-width: 400px;</ins> <ins>min-height: 400px;</ins>
+            </p>
+
+            <p class="shorthand">
+                <ins>max-width: 800px;</ins> <ins>max-height: 800px;</ins>
+            </p>
+
+        </article>
+    </main>
+    <footer>
+        <p>Site criado por <strong>Matheus</strong> com o objetivo de treinar e ajudar ele mesmo ou alguém futuro</p>
+    </footer>   
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji/Favicon/Listas</title>
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+       main{
+            margin: auto;
+            margin-top: 25px;
+       }
+
+       main #titulo-emoji{
+            padding-top: 15px;
+       }
+       
+       main .paragrafo-emoji{
+        text-align: center;
+       }
+       
+       main ol{
+        list-style-position: inside;
+        display: block;
+        margin-left: 300px;
+        padding-bottom: 20px;
+        text-align: justify;
+       }
+
+       main ul{
+        list-style-position: inside;
+        display: block;
+        margin-left: 300px;
+        padding-bottom: 20px;
+        text-align: justify;
+       }
+
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EMOJIS/FAVICON/LISTAS</h1>
+        <p>Vamos aprender em como colocar emojis e favicons no seu site</p>
+    </header>
+    <nav>
+        <a href="index.html">Apresentação</a>
+        <a href="pagina01.html">Imagens</a>
+        <a href="pagina03.html">Iframe</a>
+        <a href="pagina04.html">Áudio</a>
+        <a href="pagina05.html">Cores</a>
+        <a href="pagina06.html">Fontes</a>
+        <a href="pagina07.html">Id/Class</a>
+        <a href="pagina08.html">Pseudo-Classe/Elemento</a>
+        <a href="pagina09.html">Modelo de Caixas</a>
+        <a href="pagina10.html">Variáveis em CSS</a>
+        <a href="pagina11.html">Em Construção</a>
+
+    </nav>
+    <main>
+        <article>
+            <h1 id="titulo-emoji">Emojis</h1>
+            <p>
+                Hoje em dia, os emojis são muito utilizados na mídia, para várias coisas, e em um site não seria diferente. Primeiro, você precisa do código do emoji que sempre começa com a letra <strong>U</strong>, exemplo: U+1F913. Para colocar um emoji, você deve antes substituir a parte do código do emoji <strong>U+</strong> por um outro código: <strong>&#x</strong> e depois coloque o resto do código do emoji junto. Recomendo o site <a href="https://emojipedia.org" target="_blank">Emojipedia</a> para os códigos.
+            </p>
+            <h2>Exemplos</h2>
+
+            <p class="paragrafo-emoji">
+                &#x1F913   
+            </p>
+
+            <p class="paragrafo-emoji">
+                &#x270D
+            </p>
+
+            <h1>Favicon</h1>
+            <p>
+                Favicon nada mais, nada menos é aquele ícone na parte da aba de algum site, na parte superior do navegador.
+                Para usar um Favicon no seu site, você precisa ter o arquivo do ícone, que geralmente está no formato <strong>ICO</strong>.Os formatos suportados para favicon são, <strong>ICO</strong>, <strong>PNG</strong> e <strong>SVG</strong>.a tag para o favicon é <ins>&lt;link&gt;</ins>, quando você for escrever ela no <abbr title="Visual Studio Code">VS</abbr>irá aparecer vários tipos de link, escolha o que está escrito favicon na frente.
+            </p>
+
+            <h1>Listas</h1>
+            <p>
+                As listas estão presentes em muitos lugares, seja listas de desejos, de compras ou até de regras. Na internet não seria diferente, existem dois tipos de listas, as ordenadas e não ordenadas. 
+            </p>
+
+            <h2>Listas Ordenadas</h2>
+            <p>
+                Para criar uma lista ordenada, usamos a tag <ins>&lt;ol&gt;</ins> e dentro dessa tag colocamos itens de lista(as tags <ins>&lt;li&gt;</ins>). Esse tipo de lista contém marcadores organizados em ordem, temos cinco tipos de marcadores:
+            </p>
+            <ol type="1">
+                <li>Listas numeradas</li>
+            </ol>
+            <ol type="A">
+                <li>Listas alfabéticas em maiúsculas</li>
+            </ol>
+            <ol type="a">
+                <li>Listas alfabéticas em minúsculas</li>
+            </ol>
+            <ol type="I">
+                <li>Listas com algarismos romanos em maiúsculas</li>
+            </ol>
+            <ol type="i">
+                <li>Listas com algarismos romanos em minúsculas</li>
+            </ol>
+
+            <p>Para mudar o estilo da lista, basta colocar <strong>type</strong> dentro da tag</p>
+
+            <h2>Listas Não Ordenadas</h2>
+            <p>
+                Para criar uma lista não ordenada, usamos a tag <ins>&lt;ul&gt;</ins> e dentro dessa tag colocamos itens de lista(as tags <ins>&lt;li&gt;</ins>). Esse tipo de lista contém marcadores desorganizados. Temos três tipos de marcadores:   
+            </p>
+
+            <ul type="disc">
+                <li>Listas com uma bola preta pintada</li>
+            </ul>
+            <ul type="circle">
+                <li>Listas com uma bola com borda preta</li>
+            </ul>
+            <ul type="square">
+                <li>Listas com um quadrado preto pintado</li>
+            </ul>
+        </article>
+    </main>  
+    <footer>
+        <p>Site criado por <strong>Matheus</strong> com o objetivo de treinar e ajudar ele mesmo ou alguém futuro</p>   
+    </footer> 
+</body>
+</html>
